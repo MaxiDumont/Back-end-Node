@@ -4,15 +4,12 @@ var bodyParser =  require('body-parser');
 const req = require('express/lib/request');
 const cors = require('cors');
 
-
-var mongoose = require('mongoose');
-var app = require('./app')
 var PORT = process.env.PORT || 3999;
 
-            // Creacion del Servidor
-            app.listen(PORT,()=>{
-                console.log("Servidor corriendo correctamente en la url: localhost:3999")
-            })
+// Creacion del Servidor
+app.listen(PORT,()=>{
+    console.log("Servidor corriendo correctamente en la url: localhost:3999")
+})
 
 
 
