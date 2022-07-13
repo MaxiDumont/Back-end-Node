@@ -9,6 +9,7 @@
     "jwt-simple": "^0.5.6",
     "moment": "^2.29.3",
     "mongoose": "^6.3.5",
+    "mongoose-paginate-v2": "^1.6.3",
     "validator": "^10.11.0"
   },
   "name": "api-rest-node",
@@ -20,7 +21,7 @@
   },
   "scripts": {
     "test": "asd",
-    "start": "node app",
+    "start": "nodemon index",
     "start:dev": "nodemon index.js"
   },
   "author": "Maximiliano Dumont",
