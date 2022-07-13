@@ -4,8 +4,6 @@ var bodyParser =  require('body-parser');
 const req = require('express/lib/request');
 const cors = require('cors');
 const mongoosePaginate = require('mongoose-paginate-v2');
-const { default: mongoose } = require('mongoose');
-var mangoose = require('mongoose');
 
 const { default: mongoose } = require('mongoose');
 var mangoose = require('mongoose');
