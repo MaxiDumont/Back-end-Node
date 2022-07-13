@@ -2,6 +2,7 @@
 const express = require('express');
 var bodyParser =  require('body-parser');
 const req = require('express/lib/request');
+const cors = require('cors');
 const { default: mongoose } = require('mongoose');
 var mangoose = require('mongoose');
 
@@ -30,6 +31,7 @@ var comment_routes = require('./routes/comment');
 //middlewares
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+app.use(cors());
 
 //reescribir rutas con /api/
 app.use('/api', user_routes);
