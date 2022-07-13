@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "asd",
-    "start": "nodemon index.js",
+    "start": "node app",
     "start:dev": "nodemon index.js"
   },
   "author": "Maximiliano Dumont",
