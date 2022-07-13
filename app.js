@@ -3,12 +3,13 @@ const express = require('express');
 var bodyParser =  require('body-parser');
 const req = require('express/lib/request');
 const cors = require('cors');
+const app = express()
 
 const PORT = process.env.PORT || 3999;
+app.use(express.static(__dirname + "/public"));
 app.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });
-
 
 
 // archivos de rutas rutas
