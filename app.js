@@ -13,9 +13,9 @@ var app = express();
             })
 
 // archivos de rutas rutasS
-// var user_routes = require('./routes/user');
-// var topic_routes = require('./routes/topic');
-// var comment_routes = require('./routes/comment');
+var user_routes = require('./routes/user');
+var topic_routes = require('./routes/topic');
+var comment_routes = require('./routes/comment');
 
 
 //middlewares
