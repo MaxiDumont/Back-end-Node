@@ -1,4 +1,15 @@
+
 {
+  "name": "api-rest-node",
+  "version": "1.0.0",
+  "description": "API RESTful con NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [],
+  "author": "Maximiliano Dumont",
+  "license": "MIT",
   "dependencies": {
     "angular-froala-wysiwyg": "^4.0.11",
     "bcrypt-nodejs": "^0.0.3",
@@ -11,16 +22,5 @@
     "mongoose": "^6.3.5",
     "mongoose-paginate-v2": "^1.6.3",
     "validator": "^10.11.0"
-  },
-  "name": "api-rest-node",
-  "version": "1.0.0",
-  "description": "API RESTful con NodeJS",
-  "main": "index.js",
-  "scripts": {
-    "test": "asd",
-    "start": "node app.js",
-    "start:dev": "node app.js"
-  },
-  "author": "Maximiliano Dumont",
-  "license": "MIT"
+  }
 }
