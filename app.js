@@ -3,7 +3,7 @@ const express = require('express');
 var bodyParser =  require('body-parser');
 const req = require('express/lib/request');
 const cors = require('cors');
-const mongoosePaginate = require('mongoose-paginate-v2');
+
 
 var mongoose = require('mongoose');
 var app = require('./app')
