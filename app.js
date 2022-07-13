@@ -3,6 +3,8 @@ const express = require('express');
 var bodyParser =  require('body-parser');
 const req = require('express/lib/request');
 const cors = require('cors');
+const { default: mongoose } = require('mongoose');
+var mangoose = require('mongoose');
 
 const PORT = process.env.PORT || 3999;
 var app = express();
@@ -11,10 +13,11 @@ var app = express();
                 console.log("Servidor corriendo correctamente en la url: localhost:3999")
             })
 
-// archivos de rutas rutasS
-// var user_routes = require('./routes/user');
-// var topic_routes = require('./routes/topic');
-// var comment_routes = require('./routes/comment');
+
+// archivos de rutas rutas
+var user_routes = require('./routes/user');
+var topic_routes = require('./routes/topic');
+var comment_routes = require('./routes/comment');
 
 
 //middlewares
@@ -23,7 +26,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //reescribir rutas con /api/
-app.use('/api'+"./routes/user");
+app.use('/api', user_routes);
+app.use('/api', topic_routes);
+app.use('/api', comment_routes);
 
 //ruta de pruba 
 app.get('/prueba',(req,res)=>{
