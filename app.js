@@ -4,6 +4,7 @@ var bodyParser =  require('body-parser');
 const req = require('express/lib/request');
 const cors = require('cors');
 const { default: mongoose } = require('mongoose');
+var mangoose = require('mongoose');
 
 const PORT = process.env.PORT || 3999;
 var app = express();
