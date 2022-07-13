@@ -7,7 +7,7 @@
     "start": "node app"
   },
   "keywords": [],
-  "author": "Maximiliano Dumonte",
+  "author": "Maximiliano Dumont",
   "license": "MIT",
   "dependencies": {
     "angular-froala-wysiwyg": "^4.0.11",
@@ -18,6 +18,7 @@
     "express": "^4.18.1",
     "jwt-simple": "^0.5.6",
     "moment": "^2.29.3",
+    "mongoose": "^6.3.5",
     "validator": "^10.11.0"
   }
 }
