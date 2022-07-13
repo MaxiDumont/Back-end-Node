@@ -13,9 +13,9 @@ app.listen(PORT, () => {
 
 
 // archivos de rutas rutas
-// var user_routes = require('./routes/user');
+var user_routes = require('./routes/user');
 // var topic_routes = require('./routes/topic');
-var comment_routes = require('./routes/comment');
+// var comment_routes = require('./routes/comment');
 
 
 //middlewares
@@ -24,9 +24,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //reescribir rutas con /api/
-// app.use('/api', user_routes);
+app.use('/api', user_routes);
 // app.use('/api', topic_routes);
-app.use('/api', comment_routes);
+// app.use('/api', comment_routes);
 
 //ruta de pruba 
 app.get('/prueba',(req,res)=>{
