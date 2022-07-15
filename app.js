@@ -1,12 +1,19 @@
 'use strict'
 const express = require('express');
-var bodyParser =  require('body-parser');
-const req = require('express/lib/request');
 const cors = require('cors');
-const app = express()
 const { default: mongoose } = require('mongoose');
+const req = require('express/lib/request');
+const app = express();
+
+var bodyParser =  require('body-parser');
 var mangoose = require('mongoose');
 var PORT = process.env.PORT || 3999;
+
+//esto de abajo sirve para conectarnos con el servidor en linea de Mongodb atlas
+//al mismo tiempo ayuda a la coneccion adecuada de heroku para mantener el servidor en linea, no se si es un paso extra o no
+//pero de que funciona funciona. para que heroku funcione tenemos que manejar bien las versiones de git y claro los errores
+//con las dependencias que utiliza el proyecto fallos en la configuracion de las dependencias generaran errores con heroku 
+//al igual que las malas lineas de codigo de las conecciones a la base de datos pertinentes.
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb+srv://Maximiliano:tjo56822@api-rest-node.tsxdsji.mongodb.net/api-rest-node?retryWrites=true&w=majority', { useNewUrlParser: true })
@@ -42,6 +49,8 @@ app.use('/api', comment_routes);
 app.get('/prueba',(req,res)=>{
     res.status(200).send({message:'Hola mundo desde mi API REST con NodeJS'})
 });
+
+
 
 
 // //cors Configurar cabeceras y cors
