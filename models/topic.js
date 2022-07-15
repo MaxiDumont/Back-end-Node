@@ -1,7 +1,7 @@
 'use strict'
 
 var mongoose = require('mongoose');
-var mongoosePaginate = require('mongoose-paginate-V2');
+var mongoosePaginate = require('mongoose-paginate');
 var Schema = mongoose.Schema;
 
 var CommentSchema = new Schema({
