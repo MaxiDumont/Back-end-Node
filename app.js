@@ -4,12 +4,22 @@ var bodyParser =  require('body-parser');
 const req = require('express/lib/request');
 const cors = require('cors');
 const app = express()
+const { default: mongoose } = require('mongoose');
+var mangoose = require('mongoose');
+var PORT = process.env.PORT || 3999;
 
-const PORT = process.env.PORT || 3999;
-app.use(express.static(__dirname + "/public"));
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb+srv://Maximiliano:tjo56822@api-rest-node.tsxdsji.mongodb.net/api-rest-node?retryWrites=true&w=majority', { useNewUrlParser: true })
+        .then (()=>{
+            console.log("conexion a la base de datos establecida satisfactoriamente")
+
+            // Creacion del Servidor
+            app.listen(PORT,()=>{
+                console.log(`Servidor corriendo correctamente en la url:${PORT}`)
+            })
+
+        })
+        .catch(err => console.log(err));
 
 
 // archivos de rutas rutas

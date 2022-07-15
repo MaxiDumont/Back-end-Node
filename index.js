@@ -6,7 +6,7 @@ var app = require('./app')
 var port = process.env.PORT || 3999;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/api_rest_node', { useNewUrlParser: true })
+mongoose.connect('mongodb+srv://Maximiliano:tjo56822@api-rest-node.tsxdsji.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true })
         .then (()=>{
             console.log("conexion a la base de datos establecida satisfactoriamente")
 
