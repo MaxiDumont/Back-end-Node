@@ -75,9 +75,9 @@ var controller={
             }else{
                 return res.status(200).send({
                     status: 'success',
-                    topics: topics.docs,
-                    totalDocs: topics.totalDocs,
-                    totalPages: topics.totalPages,
+                    topics: topics.docs,                 
+                    totalPages: topics.pages,
+                    tuvieja : 'tuvieja'
                 });
             }
         })//fin finde paginado
